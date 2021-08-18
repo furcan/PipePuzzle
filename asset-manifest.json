@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/PipePuzzle/static/css/main.375d5b59.chunk.css",
+    "main.js": "/PipePuzzle/static/js/main.69720deb.chunk.js",
+    "main.js.map": "/PipePuzzle/static/js/main.69720deb.chunk.js.map",
+    "runtime-main.js": "/PipePuzzle/static/js/runtime-main.9b8fad18.js",
+    "runtime-main.js.map": "/PipePuzzle/static/js/runtime-main.9b8fad18.js.map",
+    "static/js/2.8af98024.chunk.js": "/PipePuzzle/static/js/2.8af98024.chunk.js",
+    "static/js/2.8af98024.chunk.js.map": "/PipePuzzle/static/js/2.8af98024.chunk.js.map",
+    "index.html": "/PipePuzzle/index.html",
+    "static/css/main.375d5b59.chunk.css.map": "/PipePuzzle/static/css/main.375d5b59.chunk.css.map",
+    "static/js/2.8af98024.chunk.js.LICENSE.txt": "/PipePuzzle/static/js/2.8af98024.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9b8fad18.js",
+    "static/js/2.8af98024.chunk.js",
+    "static/css/main.375d5b59.chunk.css",
+    "static/js/main.69720deb.chunk.js"
+  ]
+}
