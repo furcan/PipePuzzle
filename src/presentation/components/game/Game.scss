@@ -316,18 +316,23 @@
         0% {
           transform: translateX(0);
         }
+
         20% {
           transform: translateX(-3%);
         }
+
         40% {
           transform: translateX(3%);
         }
+
         60% {
           transform: translateX(-3%);
         }
+
         80% {
           transform: translateX(3%);
         }
+
         100% {
           transform: translateX(0);
         }
@@ -343,7 +348,6 @@
     transition: $transition_border;
     color: $color_dark;
     background: transparent;
-    border: none;
     padding: 0;
     margin: 0;
     display: inline-flex;

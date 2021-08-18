@@ -37,6 +37,7 @@ interface IReduxPuzzleState {
   puzzleWebSocket?: WebSocket;
   puzzleRemainingValidationAttempt: number;
   puzzleIsNextLevelAvailable: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   puzzleReducer?: any;
 }
 
