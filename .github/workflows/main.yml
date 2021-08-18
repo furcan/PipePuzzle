@@ -14,10 +14,10 @@ jobs:
         run: |
           yarn
 
-      # - name: Lint and Test 🔍
-      #   run: |
-      #     yarn lint
-      #     yarn test
+      - name: Lint and Test 🔍
+        run: |
+          yarn lint
+          yarn test
 
       - name: Build ⚙️
         run: |
