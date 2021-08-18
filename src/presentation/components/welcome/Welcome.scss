@@ -1,0 +1,149 @@
+@import "presentation/styles/variables";
+
+.welcome {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__head {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $color_theme_dark;
+    margin: 0 0 1rem;
+
+    @include media_up($breakpoint_tablet) {
+      margin: 0 0 1.5rem;
+    }
+
+    &__title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+    }
+
+    &__description {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: rgba($color_theme_dark, 0.75);
+    }
+  }
+
+  &__levels {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $color_dark;
+    background: $color_gray_light;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  &__level {
+    width: 100%;
+    background: $color_white;
+    padding: 0.75rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin: 0 0 1rem;
+    }
+
+    &--head {
+      background: transparent;
+      padding: 0 0.75rem 1rem;
+      margin: 0 !important;
+    }
+
+    &__key {
+      width: auto;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      &--locked {
+        color: rgba($color_theme_dark, 0.5);
+      }
+
+      &.key--level {
+        width: 4rem;
+        font-weight: 500;
+        font-size: 0.8rem;
+      }
+
+      &.key--achievement {
+        flex-grow: 1;
+        padding: 0 0.5rem;
+        font-weight: 700;
+        font-size: 0.8rem;
+      }
+
+      &.key--play {
+        width: 2.75rem;
+      }
+
+      &__icon {
+        &--lock {
+          margin: 0 0 0 0.25rem;
+          color: rgba($color_theme_dark, 0.5);
+          transform: translateY(-0.05rem);
+        }
+
+        &--achievement {
+          width: 1.25rem;
+          height: 1.25rem;
+          color: rgba($color_theme_dark, 0.25);
+        }
+      }
+    }
+
+    &--head &__key {
+      font-weight: 500;
+      font-size: 0.7rem;
+      color: rgba($color_theme_dark, 0.5);
+    }
+
+    &__button {
+      transition: $transition_background;
+      width: 2.75rem;
+      height: 2.75rem;
+      padding: 0.5rem 0.5rem 0.5rem 0.7rem;
+      border-radius: 2rem;
+      color: $color_white;
+      background: $color_theme_green;
+      font-size: 1.75rem;
+      line-height: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      &:hover {
+        background: $color_theme_dark;
+      }
+
+      &--passive {
+        pointer-events: none;
+        opacity: 0.2;
+        color: rgba($color_white, 0.6);
+        background: $color_theme_dark;
+      }
+    }
+  }
+}

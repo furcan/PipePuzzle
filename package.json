@@ -1,0 +1,56 @@
+{
+  "name": "pipe-puzzle",
+  "homepage": "https://furcan.github.io/PipePuzzle/",
+  "version": "1.0.0-Beta.01",
+  "private": true,
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "eslint": "^7.25.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "node-sass": "^6.0.1",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-scripts": "4.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

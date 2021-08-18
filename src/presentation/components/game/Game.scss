@@ -1,0 +1,393 @@
+@import "presentation/styles/variables";
+
+.game {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+
+  &--failure,
+  &--loading {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    &__icon {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &__message {
+      margin: 1rem 0 0;
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    &__button {
+      transition: $transition_background, $transition_color;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 4rem;
+      padding: 0.75rem 1.25rem;
+      margin: 1.5rem 0 0;
+      color: $color_white;
+      background: $color_theme_dark;
+      font-size: 0.9rem;
+      font-weight: 500;
+
+      &:hover {
+        background: $color_dark;
+      }
+
+      &__icon {
+        transform: scale(1.2);
+        margin: 0 0.5rem 0 0;
+      }
+    }
+  }
+
+  &--failure__icon {
+    color: $color_theme_red;
+  }
+
+  &--loading__icon {
+    color: $color_theme_green;
+    animation: animation_game_loading 1s linear infinite;
+
+    @keyframes animation_game_loading {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &__over {
+    position: absolute;
+    z-index: 2;
+    left: -0.5rem;
+    top: -0.5rem;
+    width: calc(100% + 1rem);
+    height: calc(100% + 1rem);
+    background: rgba($color_white, 0.75);
+    backdrop-filter: blur(0.125rem);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    &__icon {
+      width: 4rem;
+      height: 4rem;
+      color: $color_theme_red;
+    }
+
+    &__message {
+      margin: 1rem 0 2rem;
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    &__button {
+      transition: $transition_background;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 4rem;
+      padding: 0.75rem 1.25rem;
+      margin: 0;
+      color: $color_white;
+      background: $color_theme_dark;
+      font-size: 0.9rem;
+      font-weight: 500;
+
+      &:hover {
+        background: $color_dark;
+      }
+
+      &__icon {
+        transform: scale(1.2);
+        margin: 0 0.5rem 0 0;
+      }
+    }
+  }
+
+  &__actions {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+    padding: 0.5rem 0 1rem;
+    border-bottom: 0.075rem dashed rgba($color_black, 0.15);
+
+    @include media_up($breakpoint_tablet) {
+      margin: 0 auto 1.5rem;
+      padding: 0 0 1.25rem;
+    }
+
+    &__level {
+      position: absolute;
+      left: 0;
+      top: -2rem;
+      right: 0;
+      width: fit-content;
+      margin: auto;
+      padding: 0.5rem 1rem;
+      border-radius: 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: $color_white;
+      background: $color_theme_yellow;
+
+      @include media_up($breakpoint_tablet) {
+        top: -3rem;
+      }
+    }
+
+    &__achievement {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0.5rem 0 1rem;
+
+      @include media_up($breakpoint_tablet) {
+        margin: 0 0 0.75rem;
+      }
+
+      &__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0 auto 0.5rem;
+        color: $color_theme_yellow;
+      }
+
+      &__message {
+        font-size: 0.9rem;
+
+        &__highlight {
+          margin: 0 0 0 0.5rem;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__buttons {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__finish {
+      max-width: 11rem;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: rgba($color_dark, 0.5);
+      word-break: break-all;
+      word-break: break-word;
+      white-space: pre-line;
+    }
+
+    &__button {
+      transition: $transition_background, $transition_color;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-radius: 4rem;
+      padding: 0.75rem 1.25rem;
+      margin: 0.5rem 0.875rem;
+      color: $color_white;
+      background: $color_theme_dark;
+      font-size: 0.9rem;
+      font-weight: 500;
+
+      &:hover {
+        background: $color_dark;
+      }
+
+      &--validate {
+        color: $color_dark;
+        background: $color_theme_green;
+
+        &:hover {
+          color: $color_white;
+          background: $color_theme_dark;
+        }
+      }
+
+      &--next {
+        color: $color_white;
+        background: $color_theme_yellow;
+
+        &:hover {
+          color: $color_white;
+          background: $color_theme_dark;
+        }
+      }
+
+      &__icon {
+        transform: scale(1.2);
+        margin: 0 0.5rem 0 0;
+      }
+    }
+
+    &__info {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0.75rem 0 0;
+
+      &__message {
+        font-size: 0.9rem;
+
+        &.message--small {
+          margin: 0.25rem 0 0;
+          font-size: 0.7rem;
+        }
+
+        &.state--1 {
+          color: $color_theme_green;
+        }
+
+        &.state--2 {
+          color: $color_theme_yellow;
+        }
+
+        &.state--3 {
+          color: $color_theme_red;
+        }
+
+        &__count {
+          margin: 0 0 0 0.5rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &__puzzle {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    background: $color_white;
+    white-space: nowrap;
+    overflow: auto hidden;
+
+    &--bounce {
+      animation: animation_game_puzzle_bouce 0.5s ease-in-out 1;
+
+      @keyframes animation_game_puzzle_bouce {
+        0% {
+          transform: translateX(0);
+        }
+        20% {
+          transform: translateX(-3%);
+        }
+        40% {
+          transform: translateX(3%);
+        }
+        60% {
+          transform: translateX(-3%);
+        }
+        80% {
+          transform: translateX(3%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  &__row {
+    display: block;
+  }
+
+  &__item {
+    transition: $transition_border;
+    color: $color_dark;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2.5rem;
+    line-height: 1;
+    border: 0.05rem solid rgba($color_black, 0.05);
+
+    @for $i from 1 through 12 {
+      &--attempt--#{$i} {
+        color: darken($color_theme_red, $i * 5%);
+      }
+    }
+
+    &:hover {
+      border-color: rgba($color_black, 0.2);
+    }
+  }
+
+  &--succeeded &__item {
+    pointer-events: none;
+    border-color: transparent;
+    color: $color_theme_green;
+    animation: animation_game_succeeded 1.5s infinite cubic-bezier(0.25, 0.5, 0.1, 1);
+    text-shadow: 0 0 0.125rem rgba($color_theme_green, 0.75);
+
+    @keyframes animation_game_succeeded {
+      to {
+        text-shadow: 0 0 1rem rgba($color_theme_green, 0);
+      }
+    }
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+
+  &--failed &__item {
+    pointer-events: none;
+    border-color: transparent;
+    color: $color_theme_red;
+  }
+}
